@@ -15,11 +15,15 @@ class MainActivity : AppCompatActivity() {
         binding = newBinging
         setContentView(newBinging.root)
         binding?.run {
-            binding?.button?.setOnClickListener{
-                if(etName?.text.toString().trim().equals("") == true || etName?.text.toString().length > 50 || etHeight?.text.toString().toInt() > 250 || etHeight?.text.toString().toInt() < 0 || etWeight?.text.toString().toInt() > 250 || etWeight?.text.toString().toInt() < 0 || etAge?.text.toString().toInt() < 0 || etAge?.text.toString().toInt() > 150) {
+            button?.setOnClickListener{
+                val name = etName?.text.toString()
+                val height = etHeight?.text.toString().toInt()
+                val weight = etWeight?.text.toString().toInt()
+                val age = etAge?.text.toString().toInt()
+                if(name.trim().equals("") == true || name.length > 50 || height > 250 || height < 0 || weight > 250 || weight < 0 || age < 0 || age > 150) {
                     textView3?.text = "The data is incorrect"
                 }else {
-                    var cnt: Int = etWeight?.text.toString().toInt() * 10 + etHeight?.text.toString().toInt() * 6 - etAge?.text.toString().toInt() * 5 - etName?.text.toString().length.toInt()
+                    var cnt: Int = weight * 10 + height * 6 - age * 5 - name.length
                     textView3?.text = "Answer: $cnt"
                 }
             }
