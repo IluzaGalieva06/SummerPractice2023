@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.summerpractice.databinding.FragmentSettingBinding
+import com.google.android.material.snackbar.Snackbar
 
 class SettingFragment : Fragment(R.layout.fragment_setting) {
     private  var binding: FragmentSettingBinding? = null
@@ -14,12 +15,16 @@ class SettingFragment : Fragment(R.layout.fragment_setting) {
         binding?.run {
             btnPaymentServices.setOnClickListener {
                 findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
+                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
+
             }
             btnPrivacy.setOnClickListener {
                 findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
+                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
             }
             btnSafety.setOnClickListener {
                 findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
+                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
             }
         }
     }

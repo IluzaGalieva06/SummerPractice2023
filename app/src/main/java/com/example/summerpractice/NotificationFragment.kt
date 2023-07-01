@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.summerpractice.databinding.FragmentNotificationBinding
+import com.google.android.material.snackbar.Snackbar
 
 class NotificationFragment : Fragment(R.layout.fragment_notification) {
     private var binding: FragmentNotificationBinding? = null
@@ -14,6 +15,7 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
         binding?.run {
             btnWrite.setOnClickListener {
                 findNavController().navigate(R.id.action_notificationFragment_to_developmentFragment)
+                Snackbar.make(view, "Notification", Snackbar.LENGTH_LONG).show()
             }
         }
     }
