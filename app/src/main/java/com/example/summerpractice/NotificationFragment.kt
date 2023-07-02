@@ -11,11 +11,13 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
     private var binding: FragmentNotificationBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bundle = Bundle()
+        bundle.putString(resources.getString(R.string.previous_fragment_class), this.javaClass.simpleName)
+
         binding = FragmentNotificationBinding.bind(view)
         binding?.run {
             btnWrite.setOnClickListener {
-                findNavController().navigate(R.id.action_notificationFragment_to_developmentFragment)
-                Snackbar.make(view, "Notification", Snackbar.LENGTH_LONG).show()
+                findNavController().navigate(R.id.action_notificationFragment_to_developmentFragment, bundle)
             }
         }
     }

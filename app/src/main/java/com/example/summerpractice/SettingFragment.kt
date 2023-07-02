@@ -11,21 +11,23 @@ class SettingFragment : Fragment(R.layout.fragment_setting) {
     private  var binding: FragmentSettingBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val bundle = Bundle()
+        bundle.putString(resources.getString(R.string.previous_fragment_class), this.javaClass.simpleName)
         binding = FragmentSettingBinding.bind(view)
         binding?.run {
             btnPaymentServices.setOnClickListener {
-                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
-                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
-
+                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment, bundle)
             }
             btnPrivacy.setOnClickListener {
-                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
-                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
+                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment, bundle)
             }
             btnSafety.setOnClickListener {
-                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment)
-                Snackbar.make(view, "Setting", Snackbar.LENGTH_LONG).show()
+                findNavController().navigate(R.id.action_settingFragment_to_developmentFragment, bundle)
             }
         }
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
     }
 }
