@@ -17,7 +17,6 @@ class FilmAdapter(
         parent: ViewGroup,
         viewType: Int
     ): FilmHolder = FilmHolder(
-
         binding = ItemFilmBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,

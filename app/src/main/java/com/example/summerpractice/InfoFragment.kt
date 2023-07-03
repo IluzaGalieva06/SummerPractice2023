@@ -18,6 +18,9 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
     private var film: Film? = null
     private var idFromBundle: Int? = null
     private var ivCover: ImageView? = null
+    private var InfId: String? = null
+    private var InfDir: String? = null
+    private var InfName: String? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,9 +34,12 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
         idFromBundle = arguments?.getInt("ID")
         film = FilmRepository.getFilmById(idFromBundle!!)
         if (film != null) {
-            tvName?.text = film?.name
-            tvElem?.text = film?.director
-            tvId?.text = film?.id?.toString()
+            InfName = resources.getString(R.string.name) + ": " + film?.name
+            InfId = resources.getString(R.string.id) + ": " + film?.id
+            tvName?.text = InfName
+            InfDir = resources.getString(R.string.Director) + ": " + film?.director
+            tvElem?.text = InfDir
+            tvId?.text = InfId
 
             Glide.with(binding.root)
                 .load(film?.url)

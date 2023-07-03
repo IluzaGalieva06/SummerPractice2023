@@ -12,8 +12,10 @@ class MainFragment: Fragment(R.layout.fragment_main) {
 
     private var _binding: FragmentMainBinding?= null
     private val binding get() = _binding!!
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         _binding = FragmentMainBinding.bind(view)
 
         with(binding){
@@ -22,8 +24,9 @@ class MainFragment: Fragment(R.layout.fragment_main) {
             }
         }
     }
+
     override fun onDestroyView() {
-        _binding = null
         super.onDestroyView()
+        _binding = null
     }
 }

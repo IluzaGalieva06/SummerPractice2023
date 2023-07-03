@@ -30,7 +30,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_name"
-        tools:text="Director" />
+        tools:text="@string/Director" />
 
     <TextView
         android:id="@+id/tv_id"
@@ -44,7 +44,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_elem"
-        tools:text="Id" />
+        tools:text="Id"/>
 
     <ImageView
         android:id="@+id/iv_cover"

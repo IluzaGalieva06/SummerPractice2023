@@ -8,6 +8,7 @@ object FilmRepository {
         Film(id = 4, name = "The Hating Game", director = "Peter Hutchings",url = "https://flxt.tmsimg.com/assets/p20963336_v_h8_ai.jpg"),
         Film(id = 5, name = "Enola Holmes", director = "Harry Bradbeer",url = "https://favim.com/pd/s11/orig/8/890/8903/89037/enola-holmes-mbb-millie-bobby-brown-Favim.com-8903768.jpg"),
     )
+
     fun getFilmById(id: Int): Film? {
         return list.find { it.id == id }
     }
