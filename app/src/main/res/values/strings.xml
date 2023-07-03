@@ -2,5 +2,5 @@
     <string name="app_name">summerpractice</string>
     <string name="hello_blank_fragment">Profile Screen</string>
     <string name="previous_fragment_class">previousFragmentClass</string>
-
+    <string name="search_here">Search here</string>
 </resources>

@@ -15,11 +15,13 @@
         android:checked="true"
         android:icon="@drawable/baseline_notifications_24"
         android:title="Notifications"/>
+
     <item
         android:id="@+id/searchFragment"
         android:checked="true"
         android:icon="@drawable/baseline_search_24"
         android:title="Search"/>
+
     <item
         android:id="@+id/settingFragment"
         android:checked="true"

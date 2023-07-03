@@ -9,8 +9,10 @@ import com.google.android.material.snackbar.Snackbar
 
 class NotificationFragment : Fragment(R.layout.fragment_notification) {
     private var binding: FragmentNotificationBinding? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val bundle = Bundle()
         bundle.putString(resources.getString(R.string.previous_fragment_class), this.javaClass.simpleName)
 
@@ -21,6 +23,7 @@ class NotificationFragment : Fragment(R.layout.fragment_notification) {
             }
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

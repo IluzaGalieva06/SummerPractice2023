@@ -10,8 +10,4 @@ import com.example.summerpractice.databinding.FragmentMainBinding
 class MainFragment : Fragment(R.layout.fragment_main) {
     private var binging: FragmentMainBinding? = null
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-    }
 }
