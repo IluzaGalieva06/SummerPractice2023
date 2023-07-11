@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">summerpractice</string>
+    <string name="Director">Director</string>
+    <string name="name">Name</string>
+    <string name="element">Element</string>
+    <string name="id">Id</string>
 </resources>
